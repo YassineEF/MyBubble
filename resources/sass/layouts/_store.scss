@@ -1,0 +1,70 @@
+.img-desc--container {
+    @include display();
+    align-items: center;
+}
+.store--img {
+    width: 50px;
+}
+.main-home--store {
+    position: relative;
+    &-absolute {
+        position: absolute;
+        opacity: 0.7;
+        &--left {
+            left: 0;
+            bottom: 0;
+        }
+        &--right {
+            right: 0;
+            top: 0;
+            transform: rotateY(180deg);
+        }
+        & img {
+            width: 200px;
+        }
+    }
+    & h1 {
+        @include display(center);
+        align-items: center;
+        text-transform: uppercase;
+        & img {
+            width: 50px;
+        }
+    }
+}
+#command {
+    flex-wrap: wrap;
+    & article {
+        @include display(space-between);
+        align-items: center;
+        padding: 1em 0;
+        & > div:first-child h4 {
+            min-width: 8em;
+            text-align: center;
+        }
+        & > div:first-child img {
+            margin: 0 auto;
+            width: 70px;
+        }
+        & p {
+            font-weight: 900;
+        }
+    }
+    & hr {
+        border-color: $color-warning;
+    }
+}
+.container--popping {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.store--img {
+    width: 25px;
+    margin: 0 auto;
+}
+#btn-store--command {
+    width: 50%;
+    margin: 1em auto;
+    display: block;
+}

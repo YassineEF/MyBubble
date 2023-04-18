@@ -1,0 +1,24 @@
+@mixin display($justify-content: "") {
+    display: flex;
+    justify-content: $justify-content;
+    flex-wrap: wrap;
+}
+
+@mixin alignSelf() {
+    display: flex;
+    align-self: center;
+}
+@mixin buttonStyle() {
+    transition: all 0.2s linear;
+    position: relative;
+    z-index: 1;
+    font-size: 1.5em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+@mixin btnColor($color, $bg) {
+    color: $color;
+    background-color: $bg;
+}

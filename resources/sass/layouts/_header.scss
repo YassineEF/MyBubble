@@ -1,0 +1,72 @@
+header {
+    @include display(space-between);
+    padding-right: 5%;
+    & .container-logo {
+        position: relative;
+        & img {
+            width: 200px;
+        }
+    }
+    & nav {
+        position: relative;
+        @include alignSelf();
+        & .log-bg {
+            background-color: #b3bea4;
+        }
+        & ul {
+            @include alignSelf();
+            @include display("space-between");
+            & li {
+                margin-right: 0.7em;
+                font-size: 1.2em;
+                align-self: center;
+                border-radius: 1em;
+                & i {
+                    font-size: 1.5em;
+                }
+                & a {
+                    padding: 0.2em 0.5em;
+                    transition: all 0.3s linear;
+                    font-weight: 700;
+                }
+                &:hover {
+                    background-color: #d8bbbb;
+                    letter-spacing: 0.2em;
+                }
+            }
+        }
+    }
+    & #bear--header {
+        width: 60px;
+    }
+    & #header-menu--btn {
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        right: -25%;
+        top: 40%;
+        transition: all 0.2s linear;
+        padding-bottom: 0.2em;
+        &::after {
+            transform-origin: center;
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130%;
+            height: 2px;
+            background-color: #000;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+        &-choose {
+            align-self: center;
+            padding: 1em 2em;
+            border-radius: 1.5em;
+            font-weight: 900;
+            background-color: $color-green;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.main-home--form {
+    @include display(center);
+    border-radius: 1em;
+    padding: 6em 3em 3em 3em;
+    background: linear-gradient(45deg, rgb(222, 202, 168), rgb(200, 170, 163));
+    min-height: 80vh;
+    & .container-form {
+        align-self: center;
+        & .form-label {
+            display: none;
+        }
+        & .form-check {
+            &--label {
+                display: block;
+                font-size: 1.5em;
+                padding: 0.2em 0.4em;
+                cursor: pointer;
+                text-align: center;
+                transition: all 0.2s ease-out;
+                &:hover {
+                    letter-spacing: 0.2em;
+                }
+            }
+            &--input {
+                display: none;
+                &:checked + label {
+                    border-bottom: 2px solid $color-green;
+                    border-top: 2px solid $color-green;
+                }
+            }
+        }
+        &--field {
+            margin: 2em 0;
+            position: relative;
+            & span {
+                position: absolute;
+                top: -45%;
+                left: 0;
+                color: $color-warning;
+            }
+            &--input {
+                font-size: 2em;
+                padding: 0.2em;
+                border-radius: 0.3em;
+                outline: none;
+                border: none;
+                width: 100%;
+                &:focus {
+                    outline: 3px dashed #32401e74;
+                }
+            }
+        }
+    }
+    & .forget-password {
+        display: inline;
+    }
+}
+.container-login--btn {
+    @include display(space-between);
+}
+
+/* register */
+.main-home--form-register {
+    flex-direction: column;
+    & h1 {
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    .container-form {
+        display: flex;
+        gap: 2em;
+        justify-content: space-between;
+    }
+    .btn-register {
+        text-align: center;
+    }
+}
+
+/* form create own */
+.container-img--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container-form-product {
+    @include display();
+    gap: 1em;
+    &--pres {
+        @include display();
+        flex-direction: column;
+        flex: 1 1 35%;
+        & button {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+    &--choose {
+        flex: 1 1 60%;
+    }
+    &--product {
+        background-color: #d9d9d947;
+        margin-bottom: 1em;
+        border-radius: 1em;
+        padding: 1em;
+        @include display();
+        position: relative;
+    }
+    &--add {
+        @include display(center);
+        flex-direction: column;
+        align-items: center;
+        margin: 1em auto;
+        & p {
+            font-weight: 900;
+            text-transform: capitalize;
+        }
+    }
+    &--input {
+        margin: 0.5em 0;
+        @include display(center);
+        flex: 1 1 25%;
+        & img {
+            margin: 0 auto;
+            width: 50px;
+        }
+        & label {
+            border-radius: 1em;
+            padding: 0.3em;
+            transition: all 0.2s ease-in;
+        }
+        & input {
+            display: none;
+            &:checked + label {
+                outline: 1px solid $color-secondary;
+                transform: scale(1.2);
+            }
+        }
+    }
+    &--img {
+        background-color: #d8bbbba3;
+        border-radius: 2em;
+        padding: 2em 0;
+        & img {
+            margin: 0 auto;
+        }
+    }
+    .container-btn--choose {
+        @include display(center);
+        margin: 0.5em;
+        flex-wrap: nowrap;
+        & input::-webkit-outer-spin-button,
+        & input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        & button,
+        & input[type="number"] {
+            padding: 0.2em;
+            width: 50%;
+            border: none;
+            color: $color-warning;
+            text-align: center;
+            font-weight: 700;
+        }
+        & button {
+            background-color: $color-green;
+            cursor: pointer;
+            border-radius: 0.3em;
+        }
+    }
+    .img-desc {
+        width: 30px;
+        display: initial;
+        &--container {
+            @include display();
+            flex-direction: column;
+            align-items: center;
+            &-title {
+                @include display();
+                align-items: center;
+            }
+        }
+    }
+}

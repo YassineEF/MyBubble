@@ -1,0 +1,16 @@
+.btn {
+    @include buttonStyle();
+}
+.btn-primary {
+    @include btnColor($color-secondary, $color-primary);
+    &:hover {
+        @include btnColor($color-primary, $color-secondary);
+    }
+}
+.btn-secondary {
+    @include buttonStyle();
+    @include btnColor($color-secondary, $color-green);
+    &:hover {
+        @include btnColor($color-green, $color-primary);
+    }
+}

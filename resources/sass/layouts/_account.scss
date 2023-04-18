@@ -1,0 +1,25 @@
+.container-profile {
+    @include display();
+    align-items: center;
+    &--info {
+        gap: 5em;
+        font-weight: 900;
+        margin-bottom: 3em;
+    }
+    &--img {
+        border-radius: 5em;
+        width: 200px;
+        box-shadow: 1px 1px 15px $color-warning;
+        & img {
+            margin: 0 auto;
+            height: 150px;
+        }
+        &-popping {
+            width: 20px;
+        }
+    }
+    &--article {
+        @include display(space-between);
+        gap: 2em;
+    }
+}

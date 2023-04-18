@@ -1,0 +1,38 @@
+.main {
+    &-home {
+        min-height: 80vh;
+        border-radius: 1em;
+        padding: 6em 3em 3em 3em;
+        @include display();
+        background: linear-gradient(
+            45deg,
+            rgb(222, 202, 168),
+            rgb(200, 170, 163)
+        );
+        &--img-absolute {
+            position: absolute;
+            top: 0;
+            right: -7%;
+            opacity: 0.8;
+        }
+        &-article {
+            flex: 1 1 auto;
+            @include display(center);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            & h2 {
+                font-size: 2.5em;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+            & > div {
+                align-self: center;
+                & p {
+                    font-size: 1.5em;
+                    margin-bottom: 4em;
+                }
+            }
+        }
+    }
+}

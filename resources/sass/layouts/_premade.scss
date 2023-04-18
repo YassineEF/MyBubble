@@ -1,0 +1,25 @@
+
+.premade-container{
+    &--article{
+        @include display();
+        gap: 2em;
+    }
+    & .drink-article{
+        align-items: center;
+        flex: 1 1 25%;
+        border: 3px solid #FFFFFF;
+        background-color: #FFFFFF;
+        opacity: .7;
+        border-radius: 20px;
+        width: 150px; 
+        height:155px;
+        text-align: center;
+        & img {
+            margin: 0 auto;
+        }
+        
+        & img{
+            width: 80px;
+    }
+}
+}
